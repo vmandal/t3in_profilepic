@@ -1,0 +1,24 @@
+{namespace h=T3IN\T3inProfilepic\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+    <f:render partial="FormErrors" arguments="{object:'feuser'}"/>
+
+    Existing user pic:
+
+    <f:form action="savePic"  enctype="multipart/form-data"  name="feuser" object="{feuser}">
+
+        Image: 
+        <h:form.upload property="image.0">
+            <f:if condition="{resource}">
+                <f:image image="{resource}" alt="" width="50"/>
+            </f:if>
+        </h:form.upload>
+    
+    
+	    <f:form.submit value="Save" />
+    </f:form>
+
+</f:section>

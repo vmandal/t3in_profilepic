@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:t3in_profilepic/Resources/Private/Language/locallang_db" date="2020-10-01T19:01:11Z" product-name="t3in_profilepic">
+		<header/>
+		<body>
+			<trans-unit id="tx_t3in_profilepic_p1.name" resname="tx_t3in_profilepic_p1.name">
+				<source>[T3IN] Profile Pic</source>
+			</trans-unit>
+			<trans-unit id="tx_t3in_profilepic_p1.description" resname="tx_t3in_profilepic_p1.description">
+				<source>FEuser Profile Pic</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

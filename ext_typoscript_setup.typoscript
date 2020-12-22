@@ -1,0 +1,12 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+      T3IN\T3inProfilepic\Domain\Model\FileReference {
+        mapping {
+          tableName = sys_file_reference
+        }
+      }
+    }
+  }
+}

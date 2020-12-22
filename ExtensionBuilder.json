@@ -1,0 +1,51 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "set feuser profile pic with crop  tool",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-10.4.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "t3in_profilepic",
+        "name": "FEuser Profile pic",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "FiveE Technologies",
+                "email": "vikrammandal@gmail.com",
+                "name": "Vikram Mandal",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Profile=>index",
+                    "noncacheableActions": "Profile=>index",
+                    "switchableActions": ""
+                },
+                "description": "FEuser Profile Pic",
+                "key": "p1",
+                "name": "[T3IN] Profile Pic"
+            }
+        ],
+        "vendorName": "T3IN"
+    },
+    "wires": [],
+    "storagePath": "\/var\/www\/html\/typo3cms\/9519\/typo3conf\/ext\/",
+    "log": {
+        "last_modified": "2020-10-01 07:01",
+        "extension_builder_version": "9.10.3",
+        "be_user": " (1)"
+    }
+}
