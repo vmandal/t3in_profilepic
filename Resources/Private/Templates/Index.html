@@ -3,6 +3,8 @@
 <f:layout name="Default" />
 
 <f:section name="main">
+    
+    <f:flashMessages />
 
     <f:render partial="FormErrors" arguments="{object:'feuser'}"/>
 
@@ -17,7 +19,8 @@
             </f:if>
         </h:form.upload>
     
-    
+        <hr/>
+        
 	    <f:form.submit value="Save" />
     </f:form>
 

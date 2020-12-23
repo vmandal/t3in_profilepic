@@ -36,7 +36,8 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function savePicAction(\TYPO3\CMS\Extbase\Domain\Model\FrontendUser $feuser) {
 
         $this->frontendUserRepository->update($feuser);
-        $this->view->assign('feuser', $feuser);
+        //$this->view->assign('feuser', $feuser);
+        $this->redirect('index');
     }    
 
     /**
@@ -66,18 +67,12 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $newConfiguration = $this->arguments[$argumentName]->getPropertyMappingConfiguration();
         
 
-        $newConfiguration->forProperty('image')
-            ->setTypeConverterOptions(
-                UploadedFileReferenceConverter::class,
-                $uploadConfiguration
-            );
-        $newConfiguration->forProperty('imageCollection.0')
+        $newConfiguration->forProperty('image.0')
             ->setTypeConverterOptions(
                 UploadedFileReferenceConverter::class,
                 $uploadConfiguration
             );
 
-        //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newConfiguration, 'in controller newConfiguration');    
     }
 
 

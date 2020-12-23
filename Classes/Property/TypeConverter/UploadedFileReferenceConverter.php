@@ -122,6 +122,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
         PropertyMappingConfigurationInterface $configuration = null
         )
     {
+        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($configuration, 'convertFrom() configuration');
 
         if (!isset($source['error']) || $source['error'] === \UPLOAD_ERR_NO_FILE) {
             if (isset($source['submittedFile']['resourcePointer'])) {
@@ -181,7 +182,6 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
         array $uploadInfo, 
         PropertyMappingConfigurationInterface $configuration)
     {
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($configuration, 'importUploadedResource() configuration');
 
         if (!GeneralUtility::verifyFilenameAgainstDenyPattern($uploadInfo['name'])) {
             throw new TypeConverterException('Uploading files with PHP file extensions is not allowed!', 1399312430);
@@ -190,9 +190,6 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
                                     'T3IN\\T3inProfilepic\\Property\\TypeConverter\\UploadedFileReferenceConverter', 
                                     self::CONFIGURATION_ALLOWED_FILE_EXTENSIONS
                                 );
-
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($allowedFileExtensions, 'allowedFileExtensions');
-        //exit;
 
         if ($allowedFileExtensions !== null) {
             $filePathInfo = PathUtility::pathinfo($uploadInfo['name']);
